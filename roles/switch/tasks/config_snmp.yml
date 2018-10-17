@@ -1,0 +1,14 @@
+---
+ 
+- name: Ajout du contact et la location
+  ios_config:
+   commands:
+    - snmp-server contact {{contact}}
+    - snmp-server location {{location}}
+
+- name: Configuration de la communauté snmp
+  ios_config:
+   commands:
+    - snmp-server community "{{item}}" ro
+  with_items: "{{community.split(',')}}"
+

@@ -1,0 +1,6 @@
+---
+- name : Configuration SNMP
+  include_tasks: config_snmp.yml
+  #when: ansible_tasks == "config_snmp" and ansible_action is defined
+
+ 

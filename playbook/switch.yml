@@ -1,0 +1,6 @@
+---
+- name: Configuration switch cisco
+  hosts: switch
+  roles:
+      - roles/switch
+
